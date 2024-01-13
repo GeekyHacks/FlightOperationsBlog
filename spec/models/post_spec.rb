@@ -9,7 +9,7 @@ RSpec.describe Post, type: :model do
       expect(subject).to_not be_valid
     end
     it 'validates that text should not greater than 250' do
-      subject.text.length > 250
+      subject.text.length
       expect(subject).to_not be_valid
     end
     it 'validates that text should not be blank' do
