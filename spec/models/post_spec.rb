@@ -8,7 +8,7 @@ RSpec.describe Post, type: :model do
                         likes_counter: 0)
   end
 
-  context '#most_recent_posts' do
+  context '#most_recent_comments' do
     it 'should show last three posts for user' do
       comment1 = Comment.create(user: @user, post: @post, text: 'Hello Abdu....')
       comment2 = Comment.create(user: @user, post: @post, text: 'Hello Abdu....')
