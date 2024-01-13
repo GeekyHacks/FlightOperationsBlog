@@ -9,7 +9,7 @@ RSpec.describe Post, type: :model do
   end
 
   context '#most_recent_comments' do
-    it 'should show last three posts for user' do
+    it 'should show last five comments for user' do
       comment1 = Comment.create(user: @user, post: @post, text: 'Hello Abdu....')
       comment2 = Comment.create(user: @user, post: @post, text: 'Hello Abdu....')
       comment3 = Comment.create(user: @user, post: @post, text: 'Hello Abdu....')
