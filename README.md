@@ -19,6 +19,7 @@
   - [🛠 Built With Ruby on Rails](#Ruby on Rails)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+    - [Future Features ](#Future-features-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -47,9 +48,19 @@ This repo is blog web application about flight operations daily life, it was cre
 
 </a>
 
-- [Ruby on Rails](https://guides.rubyonrails.org/getting_started.html)
+- Create rails project linked to postgresql
+- Run the project on server
+- Manage database using models
+- Count each comment, like, and post for any user.
+- Show the most recent records for any table.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 🔭 Future Features <a name="future-features">
+
+</a>
+
+- Add Unit test for projects models
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
