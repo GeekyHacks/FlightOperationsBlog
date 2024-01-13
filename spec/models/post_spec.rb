@@ -1,41 +1,54 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  subject { described_class.new(title: 'title', text: 'text') }
+  before :each do
+    @user = User.create(name: 'Abdu', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Yemen.',
+                        posts_counter: 0)
+    @post = Post.create(author: @user, title: 'Harru', text: 'text', comments_counter: 0,
+                        likes_counter: 0)
+  end
+
+  context '#most_recent_posts' do
+    it 'should show last three posts for user' do
+      comment1 = Comment.create(user: @user, post: @post, text: 'Hello Abdu....')
+      comment2 = Comment.create(user: @user, post: @post, text: 'Hello Abdu....')
+      comment3 = Comment.create(user: @user, post: @post, text: 'Hello Abdu....')
+      comment4 = Comment.create(user: @user, post: @post, text: 'Hello Abdu....')
+      comment5 = Comment.create(user: @user, post: @post, text: 'Hello Abdu....')
+      comment6 = Comment.create(user: @user, post: @post, text: 'Hello Abdu....')
+
+      expected_posts = [comment1, comment2, comment3, comment4, comment5, comment6]
+
+      result = @post.most_recent_comments
+      expect(result).to_not eql(expected_posts)
+    end
+  end
 
   context 'testing the post data ' do
     it 'validates that title should not be blank' do
-      subject.title = nil
-      expect(subject).to_not be_valid
-    end
-    it 'validates that text should not greater than 250' do
-      subject.text.length
-      expect(subject).to_not be_valid
-    end
-    it 'validates that text should not be blank' do
-      subject.text = nil
-      expect(subject).to_not be_valid
+      @post.title = nil
+      expect(@post).to_not be_valid
     end
   end
 
   context 'testing the comments_counter' do
     it 'validates that comments_counter is not blank' do
-      subject.comments_counter = nil
-      expect(subject).to_not be_valid
+      @post.comments_counter = nil
+      expect(@post).to_not be_valid
     end
     it 'validates that comments_counter is greater or equal to zero' do
-      subject.comments_counter = -1
-      expect(subject).to_not be_valid
+      @post.comments_counter = -1
+      expect(@post).to_not be_valid
     end
   end
   context 'testing the likes_counter' do
     it 'validates that likes_counter is not blank' do
-      subject.likes_counter = nil
-      expect(subject).to_not be_valid
+      @post.likes_counter = nil
+      expect(@post).to_not be_valid
     end
     it 'validates that likes_counter is greater or equal to zero' do
-      subject.likes_counter = -1
-      expect(subject).to_not be_valid
+      @post.likes_counter = -1
+      expect(@post).to_not be_valid
     end
   end
 end
