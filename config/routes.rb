@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  # get 'users/:index'
-  # get 'users/:show'
-  resources :users, only: %i[index show]
+  resources :users, only: %i[index show] do
+    resources :posts, only: %i[index show]
+  end
+
   # Defines the root path route ("/")
-  # root "posts#index"
+  root 'users#index'
 end
