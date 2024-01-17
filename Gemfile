@@ -50,6 +50,7 @@ group :development, :test do
   gem 'rspec-rails'
   # gem "factory_bot", "~> 6.4"
   gem 'rails-controller-testing'
+  gem 'tzinfo-data'
 end
 
 group :development do
