@@ -48,6 +48,8 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mswin mswin64 mingw x64_mingw]
   gem 'rspec-rails'
+  #gem "factory_bot", "~> 6.4"
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -65,6 +67,9 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'selenium-webdriver'
+  # gem "factory_bot", "~> 6.4"
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+
