@@ -1,36 +1,40 @@
 require 'rails_helper'
 
-RSpec.describe 'Posts', type: :request do
+RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
     it 'returns http success' do
-      get '/users/:user_id/posts'
+      get '/users/index'
       expect(response).to have_http_status(:success)
     end
 
     it 'renders a correct index template' do
-      get '/users/:user_id/posts'
+      get '/users'
       expect(response).to render_template(:index)
     end
 
     it 'include the correct placeholders' do
-      get '/users/:user_id/posts'
-      expect(response.body).to include('Find me in app/views/posts/index.html.erb')
+      get '/users'
+      expect(response.body).to include('Users index')
     end
   end
 
   describe 'GET /show' do
+    before :each do
+      @user = User.create(name: 'Nasser', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                          bio: 'Teacher from Yemen.')
+    end
     it 'returns http success' do
-      get '/users/:user_id/posts/:id'
+      get '/users/show'
       expect(response).to have_http_status(:success)
     end
-    it 'renders a correct index template' do
-      get '/users/:user_id/posts/:id'
+    it 'renders a correct show template' do
+      get '/users/:id'
       expect(response).to render_template(:show)
     end
 
     it 'include the correct placeholders' do
-      get '/users/:user_id/posts/:id'
-      expect(response.body).to include('Find me in app/views/posts/show.html.erb')
+      get '/users/:id'
+      expect(response.body).to include('User1')
     end
   end
 end
