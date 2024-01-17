@@ -36,7 +36,7 @@ gem 'jbuilder'
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[mswin mswin64 mingw x64_mingw jruby]
+gem 'tzinfo-data' # , platforms: %i[mswin mswin64 mingw x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
@@ -50,7 +50,6 @@ group :development, :test do
   gem 'rspec-rails'
   # gem "factory_bot", "~> 6.4"
   gem 'rails-controller-testing'
-  gem 'tzinfo-data'
 end
 
 group :development do
