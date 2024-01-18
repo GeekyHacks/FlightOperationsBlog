@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.order(id: :desc)
   end
 
-  def show; end
+  def show
+    @user = User.find_by('id > 0', params[:id])
+  end
 end

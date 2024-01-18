@@ -1,6 +1,6 @@
 <h1>Users index</h1>
 <div class="users">
   <% @users.each do |user| %>
-    <%= render partial: 'user', locals: { user: user } %>
+    <%= render partial: 'listuser', locals: { user: user } %>
   <% end %>
 </div>
