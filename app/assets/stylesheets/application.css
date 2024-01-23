@@ -35,14 +35,16 @@ span {
   align-self: flex-end;
 }
 
-.profIntro {
+.profIntro{
   width: 15rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   flex-direction: row;
 }
-
+.postIntro {
+  border: 1px solid black;
+}
 .profIntro div {
   padding: 0.2rem;
   display: flex;
