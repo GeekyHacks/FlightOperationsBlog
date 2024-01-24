@@ -1,5 +1,4 @@
-<div>
-  <h2>User1</h2>
-  <p>I'm user one</p>
-</div>
 <%= render partial: 'biouser', locals: { user: :id } %>
+<a href="<%=users_path( @users) %>">
+  back
+</a>

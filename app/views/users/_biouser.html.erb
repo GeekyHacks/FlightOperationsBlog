@@ -1,5 +1,16 @@
 <div>
-  <%= render partial: 'listuser', locals: { user: @user } %>
-</div>
-<p><span><%=@user.id  %></span><%= @user.bio %></p>
+  <div class="profIntro">
+    <img src="<%=  @user.photo %>" alt="profileImg" class="profileImg">
+    <div>
+      <h3><%=  @user.name %></h3>
+      <span> Number of Posts:<%=  @user.posts_counter %></span>
+    </div>
+  </div>
+  <p><%= @user.bio %></p>
+
+   <div class="posts">
+    <% @user.posts.limit(3).each do |post| %>
+      <%= render partial: 'posts/listpost', locals: { post: post } %>
+    <% end %>
+  </div>
 </div>
