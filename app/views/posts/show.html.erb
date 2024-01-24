@@ -1,2 +1,3 @@
 <h1>Posts#show</h1>
 <%= render partial: 'biopost', locals: { post: @post } %>
+<span><a href="<%=user_posts_path( @post.author,@posts) %>" class="postslist"> back</a> </span>

@@ -43,7 +43,9 @@ span {
   flex-direction: row;
 }
 
-.postIntro {
+.postIntro,
+.comments,
+.postPart {
   border: 1px solid black;
 }
 
@@ -64,4 +66,8 @@ span {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.postslist {
+  color: #cd0000;
 }
