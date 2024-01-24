@@ -16,8 +16,6 @@
 body {
   font-family: Helvetica, Geneva, Arial, sans-serif;
   font-size: small;
-  /* color: #2f55e0;
-  background-color: #9d9999; */
 }
 
 a:link,
@@ -30,21 +28,24 @@ a:visited {
   border: 1px solid black;
   padding: 0.8rem;
 }
+
 span {
   font-size: x-small;
   align-self: flex-end;
 }
 
-.profIntro{
+.profIntro {
   width: 15rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   flex-direction: row;
 }
+
 .postIntro {
   border: 1px solid black;
 }
+
 .profIntro div {
   padding: 0.2rem;
   display: flex;
@@ -53,9 +54,11 @@ span {
   border: 1px solid black;
   flex-direction: row;
 }
+
 .profIntro div h3 {
   flex: 1;
 }
+
 .users {
   display: flex;
   flex-direction: column;
