@@ -23,6 +23,7 @@ a:active,
 a:visited {
   color: #cd0000;
 }
+
 .profileImg {
   flex: 0.6;
   border: 1px solid black;
