@@ -13,3 +13,82 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: Helvetica, Geneva, Arial, sans-serif;
+  font-size: small;
+}
+
+a:link,
+a:active,
+a:visited {
+  color: #cd0000;
+}
+
+.profileImg {
+  flex: 0.5;
+  border: 1px solid black;
+  padding: 1.19rem;
+}
+
+span {
+  font-size: x-small;
+  align-self: flex-end;
+}
+
+.profIntro {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex-direction: row;
+}
+
+.postIntro,
+.comments,
+.postPart,
+.bio {
+  border: 1px solid black;
+}
+
+.profIntro div {
+  padding: 0.2rem;
+  display: flex;
+  gap: 0.8rem;
+  flex: 2;
+  border: 1px solid black;
+  flex-direction: row;
+}
+
+.profIntro div h3 {
+  flex: 1;
+}
+
+.users,
+.posts,
+.userposts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.userposts {
+  gap: 0;
+}
+
+.postslist {
+  color: #cd0000;
+}
+
+.linkButton {
+  background-color: #babdbf;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.5rem;
+  margin: 1rem auto;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  align-self: center;
+}

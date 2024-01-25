@@ -1,0 +1,9 @@
+<div class="profIntro">
+  <img src="<%= user.photo %>" alt="profileImg" class="profileImg">
+  <div>
+    <a href="<%=user_path( user) %>">
+      <h3><%= user.name %></h3>
+    </a>
+    <span> Number of Posts:<%= user.posts_counter %></span>
+  </div>
+</div>
