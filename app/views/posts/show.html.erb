@@ -1,6 +1,7 @@
-<h1>Posts#show</h1>
 <%= render partial: 'biopost', locals: { post: @post } %>
-<a href="<%=user_posts_path( @post.author,@posts) %>" class="postslist"> back</a>
-<a href="<%=users_path( @users) %>">
-  All users
+<a href="<%=user_posts_path( @post.author,@posts) %>" class="linkButton">
+  See all posts
+</a>
+<a href="<%=users_path( @users) %>" class="linkButton">
+  See all Users
 </a>

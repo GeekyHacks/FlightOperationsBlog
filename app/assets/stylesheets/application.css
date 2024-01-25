@@ -25,9 +25,9 @@ a:visited {
 }
 
 .profileImg {
-  flex: 0.6;
+  flex: 0.5;
   border: 1px solid black;
-  padding: 0.8rem;
+  padding: 1.19rem;
 }
 
 span {
@@ -36,16 +36,16 @@ span {
 }
 
 .profIntro {
-  width: 15rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
   flex-direction: row;
 }
 
 .postIntro,
 .comments,
-.postPart {
+.postPart,
+.bio {
   border: 1px solid black;
 }
 
@@ -62,12 +62,32 @@ span {
   flex: 1;
 }
 
-.users {
+.users,
+.posts,
+.userposts {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+.userposts {
+  gap: 0;
+}
 
 .postslist {
   color: #cd0000;
+}
+
+.linkButton {
+  background-color: #babdbf;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.5rem;
+  margin: 1rem auto;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  align-self: center;
 }
