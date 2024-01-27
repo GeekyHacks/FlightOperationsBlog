@@ -9,6 +9,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by(id: params[:id])
     @comments = @post.most_recent_comments
+    @user = User.find(params[:user_id])
   end
 
   def new
@@ -16,7 +17,6 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
-  # Create action to handle post creation
   def create
     @post = Post.new(post_params)
     @post.author_id = current_user.id
@@ -34,12 +34,10 @@ class PostsController < ApplicationController
     end
   end
 
-  # Edit action to display the post edit form
   def edit
     @post = Post.find(params[:id])
   end
 
-  # Update action to handle post updates
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
@@ -49,7 +47,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # Destroy action to delete a post
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
