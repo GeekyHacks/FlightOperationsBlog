@@ -5,3 +5,6 @@
 <a href="<%=users_path( @users) %>" class="linkButton">
   See all Users
 </a>
+<a href="<%= new_user_post_comment_path(@post.author,@post) %>" class="linkButton">
+  add a comment
+</a>
