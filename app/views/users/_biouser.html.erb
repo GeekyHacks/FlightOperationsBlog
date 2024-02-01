@@ -8,7 +8,7 @@
   </div>
   <p class="bio"><%= @user.bio %></p>
   <div class="posts">
-    <% @user.most_recent_posts.each do |post| %>
+    <% @user.most_recent_posts.includes([:author]).each do |post| %>
       <%= render partial: 'posts/listpost', locals: { post: post } %>
     <% end %>
   </div>

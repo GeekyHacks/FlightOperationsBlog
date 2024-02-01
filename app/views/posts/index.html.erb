@@ -1,10 +1,10 @@
 <div class="userposts">
   <div><%= render partial: '/users/listuser', locals: {user: @user}  %> </div>
   <div class="posts">
-    <% @posts.each do |post| %>
+    <% @posts.includes([:author]).each do |post| %>
       <%= render partial: 'listpost', locals: { post: post } %>
       <div class="comments">
-        <% post.most_recent_comments.each do |comment| %>
+        <% post.most_recent_comments.includes([:user]).each do |comment| %>
           <p><%= comment.user.name %>: <%= comment.text %></p>
         <% end %>
       </div>
