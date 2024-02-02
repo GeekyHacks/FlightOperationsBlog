@@ -7,7 +7,6 @@ RSpec.describe 'User Post Index Page', type: :feature do
     visit user_posts_path(user)
   end
 
-
   it 'shows the user and posts details' do
     expect(page).to have_selector("img[src*='#{user.photo}']")
     expect(page).to have_content(user.name)

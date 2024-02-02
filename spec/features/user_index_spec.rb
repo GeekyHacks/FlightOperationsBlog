@@ -4,8 +4,8 @@ require 'spec_helper'
 
 RSpec.describe 'User Index Page', type: :feature do
   before do
-    user = User.create(name: 'Abdu', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Yemen.',
-                       posts_counter: 1)
+    User.create(name: 'Abdu', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Yemen.',
+                posts_counter: 1)
     visit users_path
   end
 

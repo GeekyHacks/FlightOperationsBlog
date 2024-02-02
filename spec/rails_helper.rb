@@ -62,12 +62,12 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
-  RSpec.configure do |config|
-    config.include Rails.application.routes.url_helpers
-    # config.include FactoryBot::Syntax::Methods
+  # RSpec.configure do |config|
+  #   config.include Rails.application.routes.url_helpers
+  #   # config.include FactoryBot::Syntax::Methods
 
-    # Other configurations...
-  end
+  #   # Other configurations...
+  # end
 
   config.before(:each, type: :system) do
     driven_by :selenium_chrome, using: :chrome
